@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var path = require( 'path' )
 var fs = require( 'fs' )
 var prompt = require( 'inquirer' ).prompt
@@ -174,6 +176,7 @@ config.load( {}, function( error, npm ) {
     }
   }
   
+  console.log( '' )
   askQuestions( data, writePackage )
   
 })
