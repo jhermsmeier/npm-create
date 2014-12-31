@@ -8,3 +8,13 @@
 ```sh
 $ npm install npm-create
 ```
+
+## Usage
+
+```sh
+# Create & enter the directory for your module
+$ mkdir some-package && cd some-package
+# Run it & answer the questions
+$ npm-create
+# You're done
+```
