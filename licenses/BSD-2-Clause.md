@@ -1,3 +1,5 @@
+# The BSD 2-clause "Simplified" License (BSD-2-Clause)
+
 Copyright (c) {{ date.year }}, {{ author.name }}
 All rights reserved.
 

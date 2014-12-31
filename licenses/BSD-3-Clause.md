@@ -1,3 +1,5 @@
+# The BSD 3-clause "New" or "Revised" License (BSD-3-Clause)
+
 Copyright (c) {{ date.year }}, {{ author.name }}
 All rights reserved.
 

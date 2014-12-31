@@ -1,3 +1,5 @@
+# The Apache License 2.0 (Apache-2.0)
+
 Copyright {{ date.year }} {{ author.name }}
 
 Licensed under the Apache License, Version 2.0 (the "License");
