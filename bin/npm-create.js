@@ -67,7 +67,7 @@ function askQuestions( data, callback ) {
       'Apache-2.0',
     ],
     filter: function( input ) {
-      var filename = __dirname + '/licenses/' + input + '.md'
+      var filename = __dirname + '/../licenses/' + input + '.md'
       return {
         type: input,
         text: fs.readFileSync( filename, 'utf8' )
@@ -117,7 +117,7 @@ function askQuestions( data, callback ) {
 function writePackage( data, callback ) {
   
   var dirstream = readdir({
-    root: __dirname + '/templates',
+    root: __dirname + '/../templates',
   })
   
   dirstream.on( 'data', function( file ) {
