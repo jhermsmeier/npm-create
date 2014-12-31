@@ -1,0 +1,26 @@
+{
+  "name": "{{ module.name }}",
+  "version": "{{ module.version }}",
+  "description": "{{ module.description }}",
+  "license": "{{ module.licenseType }}",
+  "keywords": {{ module.keywords }},
+  "main": "{{ module.main }}",
+  "author": {
+    "name": "{{ author.name }}",
+    "email": "{{ author.email }}",
+    "url": "{{ author.url }}"
+  },
+  "dependencies": {},
+  "devDpendencies": {},
+  "scripts": {
+    "test": "{{ module.test }}"
+  },
+  "homepage": "https://github.com/{{ author.github }}/{{ repo.prefix }}{{ module.name }}",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{{ author.github }}/{{ repo.prefix }}{{ module.name }}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/{{ author.github }}/{{ repo.prefix }}{{ module.name }}/issues"
+  }
+}
