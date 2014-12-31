@@ -1,7 +1,7 @@
 {
   "name": "npm-create",
   "version": "1.0.0",
-  "description": "npm package generator",
+  "description": "Improved npm init",
   "main": "index.js",
   "license": "MIT",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://github.com/jhermsmeier)",
