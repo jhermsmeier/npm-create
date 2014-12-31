@@ -2,8 +2,10 @@
   "name": "npm-create",
   "version": "1.0.0",
   "description": "Improved npm init",
-  "main": "index.js",
   "license": "MIT",
+  "bin": {
+    "npm-create": "bin/npm-create.js"
+  },
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://github.com/jhermsmeier)",
   "dependencies": {
     "dotty": "~0.0.2",
