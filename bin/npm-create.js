@@ -92,7 +92,7 @@ function askQuestions( data, callback ) {
         case 'mocha':
           return 'node node_modules/mocha/bin/mocha'
         default:
-          return 'echo "Error: no test specified" && exit 1'
+          return 'echo \\"Error: no test specified\\" && exit 1'
       }
     },
   }], function( results ) {
