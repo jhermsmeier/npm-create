@@ -1,6 +1,6 @@
 {
   "name": "npm-create",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Improved npm init",
   "license": "MIT",
   "bin": {
