@@ -147,6 +147,21 @@ function writePackage( data, callback ) {
     
   })
   
+  // Write out .npmignore manually here,
+  // because having it in the templates folder
+  // causes dotfiles to be ignored (issue #1)
+  dirstream.on( 'end', function() {
+    
+    var dest = path.resolve( target, '.npmignore' )
+    var npmignore = [
+      '.*',
+      'test',
+      'benchmark'
+    ].join( '\n' ) + '\n'
+    
+    fs.writeFileSync( dest, npmignore )
+    
+  })
   
 }
 
