@@ -90,7 +90,7 @@ function askQuestions( data, callback ) {
     filter: function( input ) {
       switch( input ) {
         case 'mocha':
-          return 'node node_modules/mocha/bin/mocha'
+          return 'mocha'
         default:
           return 'echo \\"Error: no test specified\\" && exit 1'
       }
