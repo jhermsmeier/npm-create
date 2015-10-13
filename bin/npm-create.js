@@ -153,11 +153,7 @@ function writePackage( data, callback ) {
   dirstream.on( 'end', function() {
     
     var dest = path.resolve( target, '.npmignore' )
-    var npmignore = [
-      '.*',
-      'test',
-      'benchmark'
-    ].join( '\n' ) + '\n'
+    var npmignore = '.*\n'
     
     fs.writeFileSync( dest, npmignore )
     
