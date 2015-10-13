@@ -80,21 +80,9 @@ function askQuestions( data, callback ) {
     default: 'lib/'+data.module.name,
   },{
     name: 'test',
-    type: 'list',
-    message: 'Test utility',
-    default: 'none',
-    choices: [
-      'none',
-      'mocha',
-    ],
-    filter: function( input ) {
-      switch( input ) {
-        case 'mocha':
-          return 'mocha'
-        default:
-          return 'echo \\"Error: no test specified\\" && exit 1'
-      }
-    },
+    type: 'input',
+    message: 'Tests',
+    default: 'echo \\"Error: no test specified\\" && exit 1',
   }], function( results ) {
     
     data.module.name = results.name

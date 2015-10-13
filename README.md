@@ -30,8 +30,6 @@ $ npm-create
   GPL-3.0
   Apache-2.0
 ? Entry point: (lib/test)
-? Test utility: (Use arrow keys)
-> none
-  mocha
+? Tests: (echo "Error: no test specified" && exit 1)
 # You're done
 ```
