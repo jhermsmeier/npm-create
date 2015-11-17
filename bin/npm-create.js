@@ -16,7 +16,7 @@ function render( template, data ) {
       selector = selector.replace( /^\s+|\s+$/g, '' )
       return lookup.get( data, selector ) || ''
     }
-  )
+  ).replace( /^\s+|\s+$/, '' ) + '\n'
 }
 
 function askQuestions( data, callback ) {
