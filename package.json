@@ -9,7 +9,7 @@
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://github.com/jhermsmeier)",
   "dependencies": {
     "dotty": "~0.0.2",
-    "inquirer": "~0.10.1",
+    "inquirer": "~0.12.0",
     "npmconf": "~2.1.2",
     "readdirp": "~2.0.0"
   },
