@@ -4,6 +4,8 @@
 [![npm downloads](https://img.shields.io/npm/dm/{{ module.name }}.svg?style=flat-square)](https://npmjs.com/{{ module.name }})
 [![build status](https://img.shields.io/travis/{{ author.github }}/{{ repo.prefix }}{{ module.name }}.svg?style=flat-square)](https://travis-ci.org/{{ author.github }}/{{ repo.prefix }}{{ module.name }})
 
+{{ module.description }}
+
 ## Install via [npm](https://npmjs.com)
 
 ```sh
