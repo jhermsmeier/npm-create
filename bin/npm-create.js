@@ -21,7 +21,7 @@ function render( template, data ) {
 
 function askQuestions( data, callback ) {
   
-  prompt([{
+  var questions = prompt([{
     name: 'name',
     message: 'Module name',
     default: data.module.name
@@ -83,7 +83,9 @@ function askQuestions( data, callback ) {
     type: 'input',
     message: 'Tests',
     default: 'echo \\"Error: no test specified\\" && exit 1',
-  }], function( results ) {
+  }])
+  
+  questions.then( function( results ) {
     
     data.module.name = results.name
     data.repo.prefix = results.prefix
