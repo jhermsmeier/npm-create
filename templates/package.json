@@ -3,18 +3,11 @@
   "version": "{{ module.version }}",
   "description": "{{ module.description }}",
   "license": "{{ module.licenseType }}",
+  "author": "{{ author.name }} <{{ author.email }}> ({{ author.url }})",
   "keywords": {{ module.keywords }},
   "main": "{{ module.main }}",
-  "author": {
-    "name": "{{ author.name }}",
-    "email": "{{ author.email }}",
-    "url": "{{ author.url }}"
-  },
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-    "test": "{{ module.test }}"
-  },
   "homepage": "https://github.com/{{ author.github }}/{{ repo.prefix }}{{ module.name }}",
   "repository": {
     "type": "git",
@@ -22,5 +15,8 @@
   },
   "bugs": {
     "url": "https://github.com/{{ author.github }}/{{ repo.prefix }}{{ module.name }}/issues"
+  },
+  "scripts": {
+    "test": "{{ module.test }}"
   }
 }
