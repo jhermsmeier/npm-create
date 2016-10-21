@@ -8,6 +8,8 @@
   "main": "{{ module.main }}",
   "dependencies": {},
   "devDependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
   "homepage": "https://github.com/{{ author.github }}/{{ repo.prefix }}{{ module.name }}",
   "repository": {
     "type": "git",
