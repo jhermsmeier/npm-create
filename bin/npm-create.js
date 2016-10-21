@@ -145,7 +145,10 @@ function writePackage( data, callback ) {
     var dest = path.resolve( target, '.npmignore' )
     var npmignore = '.*\n'
     
-    fs.writeFileSync( dest, npmignore )
+    // Don't overwrite existing .npmignore
+    try { fs.statSync( dest ) } catch( error ) {
+      fs.writeFileSync( dest, npmignore )
+    }
     
   })
   
