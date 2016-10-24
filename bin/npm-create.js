@@ -143,7 +143,17 @@ function writePackage( data, callback ) {
   dirstream.on( 'end', function() {
     
     var dest = path.resolve( target, '.npmignore' )
-    var npmignore = '.*\n'
+    // TODO: Add CI config files, such as 'appveyor.yml' (?)
+    var npmignore = [
+      '.*',
+      '*.md',
+      '*.log',
+      'doc',
+      'docs',
+      'test',
+      'example',
+      'benchmark',
+    ].join()
     
     // Don't overwrite existing .npmignore
     try { fs.statSync( dest ) } catch( error ) {
