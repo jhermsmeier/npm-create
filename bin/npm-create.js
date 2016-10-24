@@ -155,7 +155,7 @@ function writePackage( data, callback ) {
       'test',
       'example',
       'benchmark',
-    ].join()
+    ].join( '\n' ) + '\n'
     
     // Don't overwrite existing .npmignore
     try { fs.statSync( dest ) } catch( error ) {
