@@ -61,6 +61,7 @@ function askQuestions( data, callback ) {
     default: data.module.licenseType,
     choices: [
       'MIT',
+      'ISC',
       'BSD-3-Clause',
       'BSD-2-Clause',
       'GPL-3.0',
