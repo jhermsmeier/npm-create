@@ -66,6 +66,7 @@ function askQuestions( data, callback ) {
       'BSD-2-Clause',
       'GPL-3.0',
       'Apache-2.0',
+      'Unlicense',
     ],
     filter: function( input ) {
       var filename = __dirname + '/../licenses/' + input + '.md'
