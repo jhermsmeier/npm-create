@@ -9,9 +9,9 @@
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://github.com/jhermsmeier)",
   "dependencies": {
     "dotty": "~0.0.2",
-    "inquirer": "~1.0.3",
+    "inquirer": "~3.0.6",
     "npmconf": "~2.1.2",
-    "readdirp": "~2.0.0"
+    "readdirp": "~2.1.0"
   },
   "devDependencies": {},
   "keywords": [
