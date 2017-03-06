@@ -20,7 +20,7 @@ function render( template, data ) {
 }
 
 function askQuestions( data, callback ) {
-  
+
   var questions = prompt([{
     name: 'name',
     message: 'Module name',
@@ -86,9 +86,9 @@ function askQuestions( data, callback ) {
     message: 'Tests',
     default: 'echo \\"Error: no test specified\\" && exit 1',
   }])
-  
+
   questions.then( function( results ) {
-    
+
     data.module.name = results.name
     data.repo.prefix = results.prefix
     data.module.version = results.version
@@ -97,53 +97,53 @@ function askQuestions( data, callback ) {
     data.module.licenseType = results.license.type
     data.module.main = results.main
     data.module.test = results.test
-    
+
     data.module.license = render( results.license.text, data )
-    
+
     callback( data )
-    
+
   })
-  
+
 }
 
 function writePackage( data, callback ) {
-  
+
   var dirstream = readdir({
     root: __dirname + '/../templates',
   })
-  
+
   dirstream.on( 'data', function( file ) {
-    
+
     var dest = path.resolve( target, file.path )
-    
+
     if( fs.existsSync( dest ) )
       return console.log( 'IGNORING', file.path )
-    
+
     fs.readFile( file.fullPath, 'utf8', function( error, content ) {
-      
+
       if( error != null )
         throw error
-      
+
       content = render( content, data )
-      
+
       if( /\.json$/i.test( file.name ) ) {
         content = JSON.stringify( JSON.parse( content ), null, 2 )
       }
-      
+
       fs.writeFile( dest, content, function( error ) {
         if( error != null )
           throw error
       })
-      
+
     })
-    
+
   })
-  
+
   // Write out .npmignore manually here,
   // because having it in the templates folder
   // causes dotfiles to be ignored (issue #1)
   dirstream.on( 'end', function() {
-    
+
     var dest = path.resolve( target, '.npmignore' )
     // TODO: Add CI config files, such as 'appveyor.yml' (?)
     var npmignore = [
@@ -156,21 +156,21 @@ function writePackage( data, callback ) {
       'example',
       'benchmark',
     ].join( '\n' ) + '\n'
-    
+
     // Don't overwrite existing .npmignore
     try { fs.statSync( dest ) } catch( error ) {
       fs.writeFileSync( dest, npmignore )
     }
-    
+
   })
-  
+
 }
 
 config.load( {}, function( error, npm ) {
-  
+
   if( error != null )
     throw error
-  
+
   var data = {
     date: {
       year: new Date().getFullYear()
@@ -191,8 +191,8 @@ config.load( {}, function( error, npm ) {
       prefix: '',
     }
   }
-  
+
   console.log( '' )
   askQuestions( data, writePackage )
-  
+
 })
