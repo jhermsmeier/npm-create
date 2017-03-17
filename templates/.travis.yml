@@ -10,10 +10,11 @@ branches:
 script: npm test
 compiler: clang-3.6
 env:
-  - CCACHE_TEMPDIR=/tmp/.ccache-temp
-  - CCACHE_COMPRESS=1
-  - CC="clang"
-  - CXX="clang++"
+  global:
+    - CCACHE_TEMPDIR=/tmp/.ccache-temp
+    - CCACHE_COMPRESS=1
+    - CC="clang"
+    - CXX="clang++"
 addons:
   apt:
     sources:
