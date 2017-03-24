@@ -1,14 +1,12 @@
 language: node_js
-sudo: false
-notifications:
-  email: false
 node_js:
   - stable
 branches:
   only:
     - master
-script: npm test
-compiler: clang-3.6
+script:
+  - npm test
+compiler: clang-4.0
 env:
   global:
     - CCACHE_TEMPDIR=/tmp/.ccache-temp
@@ -21,3 +19,5 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++-5-dev
+notifications:
+  email: false
