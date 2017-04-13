@@ -150,11 +150,11 @@ function writePackage( data, callback ) {
       '.*',
       '*.md',
       '*.log',
-      'doc',
-      'docs',
-      'test',
-      'example',
+      '',
       'benchmark',
+      'doc',
+      'example',
+      'test',
     ].join( '\n' ) + '\n'
 
     // Don't overwrite existing .npmignore
