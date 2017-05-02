@@ -62,6 +62,7 @@ function askQuestions( data, callback ) {
     choices: [
       'MIT',
       'ISC',
+      'CC0',
       'BSD-3-Clause',
       'BSD-2-Clause',
       'GPL-3.0',
